@@ -1,0 +1,69 @@
+body{
+    background-image: url(https://i.pinimg.com/564x/f8/2a/5c/f82a5cc25914385c4ef28ea888e3598e.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    
+}
+.book {
+    width: 400px;
+    height: 600px;
+    perspective: 1000px;
+    background-color: beige;
+    position: relative;
+    align-items: flex-start;
+    container: flex-start;
+
+    .container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 100%;
+        width: 100%;
+        position:absolute; 
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 8s;
+    }
+
+    .box {
+        width: 100%;
+        height: 550px;
+        background: beige;
+        border: 5px solid goldenrod;
+        margin: 0;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        font-style:oblique;
+        text-indent: 40px;
+        font-size: 14.3px;
+    }
+    
+    .box p {
+        text-align: center;
+        font-style:initial;
+        font-size:x-large;
+    }
+    
+}
+.page {
+    width: 100%;
+    height: 100%;
+    background-image: url(https://m.media-amazon.com/images/I/71TutMCY1VL._AC_UF1000,1000_QL80_.jpg);
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #ccc;
+    position: relative;
+    transform-origin: left;
+    transition: transform 8s;
+
+}
+
+.page.open {
+    transform: rotateY(-180deg);
+}
+
